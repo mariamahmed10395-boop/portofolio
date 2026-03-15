@@ -2,9 +2,13 @@
    1. General & Root Styles
    ========================================= */
 :root {
-    --bg-color: #080808;
+    --bg-color: #050505;
+    --card-bg: #0f0f0f;
     --second-bg-color: #111111;
     --text-color: #ededed;
+    --accent-color: #00ffcc;
+    --text-primary: #ffffff;
+    --text-secondary: #ababab;
     --main-color: #00abf0; /* Electric Blue */
     --font-family: 'Poppins', sans-serif;
 }
@@ -33,10 +37,9 @@ body {
     position: fixed;
     width: 100%;
     height: 100%;
-    top: 0;
-    left: 0;
     z-index: -1;
     background-color: var(--bg-color);
+    opacity: 0.9 !important; /* زيادة الرقم يخليها بارزة جداً */
 }
 
 .container {
@@ -124,10 +127,13 @@ section {
 }
 
 .hero-text h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 10px;
+    display: block; /* ليكون في سطر منفصل */
+    font-size: 4.5rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, var(--main-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 10px;
 }
 
 .subtitle {
@@ -180,11 +186,23 @@ section {
     position: relative;
     z-index: 2;
 }
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 60px 0;
+}
 
-.about-text-box p {
-    font-size: 1.1rem;
-    color: #ababab;
-    margin-bottom: 25px;
+.about-img-box img {
+    width: 400px; /* تصغير الصورة قليلاً لتناسب السطر */
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 171, 240, 0.3);
+}
+
+.about-text-box {
+    flex: 1;
+    text-align: left; /* ليكون مثل ستايل عمرو حجاج */
 }
 
 /* الأيقونة في الخلفية (Drone/Robot Icon) */
@@ -228,22 +246,28 @@ section {
 
 .skills-grid, .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-top: 40px;
 }
 
-.skill-item, .service-card {
-    background: var(--second-bg-color);
-    padding: 30px;
-    border-radius: 15px;
-    text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: 0.4s ease;
+.skill-item {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 50%; /* دائرية كما في الصورة */
+    width: 180px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(0, 171, 240, 0.1);
+    transition: 0.4s;
 }
 
-.skill-item:hover, .service-card:hover {
+.skill-item:hover {
     border-color: var(--main-color);
-    transform: translateY(-10px);
+    box-shadow: 0 0 20px var(--main-color);
 }
 
 .skill-item i, .service-card i {
@@ -251,31 +275,116 @@ section {
     margin-bottom: 15px;
     color: var(--main-color);
 }
+/* الخبرات (Experience) مع صور */
+.exp-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    display: flex;
+    gap: 20px;
+    border-left: 5px solid var(--main-color);
+}
+
+.exp-logo { width: 80px; height: 80px; border-radius: 10px; }
 
 /* =========================================
    7. Projects
    ========================================= */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
+.projects-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 50px; /* مسافة بين كل مشروع والتاني */
 }
 
 .project-card {
-    background: var(--bg-color);
-    border-radius: 15px;
+    display: flex; /* يجعل الصورة بجانب الكلام */
+    align-items: center;
+    background: var(--card-bg);
+    border-radius: 20px;
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: 0.3s;
 }
 
 .project-img {
-    width: 100%;
-    height: 220px;
+    width: 45%; /* الصورة تأخذ نصف العرض */
+    height: 300px;
     object-fit: cover;
 }
 
 .project-info {
-    padding: 20px;
+    flex: 1;
+    padding: 40px;
+    text-align: left;
+}
+
+/* Certifications Section */
+#certifications {
+    background: var(--second-bg);
+}
+
+.certs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.cert-card {
+    background: #161625;
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid rgba(0, 171, 240, 0.1);
+    transition: 0.4s ease;
+}
+
+.cert-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--main-color);
+    box-shadow: 0 10px 30px rgba(0, 171, 240, 0.2);
+}
+
+.cert-icon {
+    font-size: 2.5rem;
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+
+.cert-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.cert-issuer {
+    color: var(--main-color);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.cert-date {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.btn-cert {
+    padding: 8px 20px;
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.btn-cert:hover {
+    background: var(--main-color);
+    color: #fff;
 }
 
 /* =========================================

@@ -22,6 +22,7 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="#thanks">Thanks</a></li>
             </ul>
@@ -29,28 +30,31 @@
     </nav>
 
     <section id="home" class="hero">
-        <div class="container flex-hero">
-            <div class="hero-text">
-                <h1>Hi, my name is <span class="highlight">Mariam Ahmed</span></h1>
-                <p class="subtitle">Artificial Intelligence & Robotics Engineer</p>
-                <div class="hero-btns">
-                    <a href="Mariam_Ahmed_CV.pdf" class="btn btn-primary" download><i class="fas fa-file-download"></i> View Resume</a>
-                </div>
-            </div>
+        <header class="hero">
+    <div class="container">
+        <p class="hi-text">Hi, my name is</p>
+        <h1 class="main-name">Mariam Ahmed</h1>
+        <p class="subtitle">Machine Learning Engineer</p>
+        <div class="hero-btns">
+            <a href="Mariam_Ahmed_CV.pdf" class="btn btn-primary" download><i class="fas fa-file-download"></i> Download Resume</a>
+            <a href="#projects" class="btn btn-outline">View Projects</a>
+            <a href="#contact" class="btn btn-outline">Get In Touch</a>
+        </div>
+    </div>
+
             <div class="hero-image-container">
                 <img src="img411.jpg" alt="Mariam Ahmed" class="profile-img">
             </div>
         </div>
+        </header>
     </section>
 
     <section id="about" class="about-section">
         <div class="container">
-            <h2 class="section-title">Professional Profile</h2>
+            <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text-box">
-                    <p>I am a motivated and results-driven <strong>Artificial Intelligence Engineer</strong> specializing in Machine Intelligence at Menoufia University. My expertise lies in developing and deploying end-to-end Machine Learning pipelines, leading interdisciplinary teams, and solving complex real-world problems through innovative technology.</p>
-                    <p>Recognized for <strong>academic excellence</strong> and honored by El Araby & Toshiba for outstanding performance. I have a strong background in autonomous systems, having participated in global competitions like the NASA Space Apps Challenge and specialized robotics bootcamps.</p>
-                    <p>Beyond engineering, I am an active leader in the tech community, having served as an organizer for Hult Prize and GDG events, and a logistic member for the AIEC Community.</p>
+                    <p>I am a motivated AI Engineer specializing in Machine Intelligence. My expertise lies in building end-to-end Machine Learning pipelines and solving complex problems through technology.</p>
                 </div>
             </div>
         </div>
@@ -58,19 +62,29 @@
 
     <section id="experience" class="exp-section">
         <div class="container">
-            <h2 class="section-title">Work Experience</h2>
+            <h2 class="section-title">My Experience</h2>
             <div class="timeline">
-                <div class="exp-item">
+            <div class="exp-card">
+            <img src="huawei-logo.png" class="exp-logo">
+            <div>
+                <h3>AI Intern</h3>
+                <p class="highlight">Huawei ICT Academy-Egypt | Jul 2025 - Feb 2026</p>
+                <p>Completed HCIA-AI V4.0 training covering Neural Networks and model evaluation.</p>
+            </div>
+                <div class="exp-card">
+                    <img src="depi-logo.png" class="exp-logo">
                     <h3>AI & Data Engineering Intern</h3>
                     <p class="highlight">DEPI Program | Dec 2025 - Present </p>
                     <p>Developing production-ready ML solutions, focusing on data pipelines and efficient model deployment.</p>
                 </div>
-                <div class="exp-item">
-                    <h3>AI & Machine Learning Intern</h3>
+                <div class="exp-card">
+                    <img src="NTI-logo.png" class="exp-logo">
+                    <h3>Machine Learning Engineer</h3>
                     <p class="highlight">National Telecommunication Institute (NTI) | 2025 </p>
-                    <p>Built predictive models and gained hands-on experience in evaluating AI system performance.</p>
+                    <p>Intensive program focusing on Deep Learning and predictive modeling using Python.</p>
                 </div>
-                <div class="exp-item">
+                <div class="exp-card">
+                    <img src="MRT-logo.png" class="exp-logo">
                     <h3>Autonomous Systems Intern</h3>
                     <p class="highlight">Menofia Grand Prix Camp | 2025 p>
                     <p>Gained hands-on skills in vehicle dynamics, automotive engineering, and autonomous driving fundamentals.</p>
@@ -79,16 +93,18 @@
         </div>
     </section>
 
-    <section id="skills" class="skills-section">
+    <section id="skills">
         <div class="container">
-            <h2 class="section-title">Technical Expertise</h2>
+            <h2 class="section-title">Technical <span class="highlight">Skills</span></h2>
             <div class="skills-grid">
-                <div class="skill-item"><i class="devicon-python-plain colored"></i><span>Python & ML Frameworks </span></div>
-                <div class="skill-item"><i class="fas fa-robot highlight"></i><span>ROS & Autonomous Systems </span></div>
-                <div class="skill-item"><i class="fas fa-chart-bar highlight"></i><span>Data Engineering & SQL </span></div>
-                <div class="skill-item"><i class="devicon-cplusplus-plain colored"></i><span>C++ Programming </span></div>
-                <div class="skill-item"><i class="fas fa-brain highlight"></i><span>Deep Learning (NVIDIA DLI) </span></div>
-                <div class="skill-item"><i class="devicon-photoshop-plain colored"></i><span>Graphic Design </span></div>
+                <div class="skill-item"><img src="python-icon.png"><span>Python</span></div>
+                <div class="skill-item"><img src="ml-icon.png"><span>Machine Learning</span></div>
+                <div class="skill-item"><img src="dl-icon.png"><span>Deep Learning</span></div>
+                <div class="skill-item"><img src="data-icon.png"><span>Data Analysis</span></div>
+                <div class="skill-item"><img src="sql-icon.png"><span>SQL</span></div>
+                <div class="skill-item"><img src="ros-icon.png"><span>ROS</span></div>
+                <div class="skill-item"><img src="cpp-icon.png"><span>C++</span></div>
+                <div class="skill-item"><img src="ps-icon.png"><span>Photoshop</span></div>
             </div>
         </div>
     </section>
@@ -116,48 +132,108 @@
         </div>
     </section>
 
-    <section id="projects" class="projects-section">
-        <div class="container">
-            <h2 class="section-title">Project Portfolio</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <img src="img531.jpg" alt="AstroVision" class="project-img">
-                    <div class="project-info">
-                        <h3>AstroVision </h3>
-                        <p>AI platform for exoplanet detection analyzing NASA Kepler/TESS data.</p>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <img src="img550.jpg" alt="MediCare Pro" class="project-img">
-                    <div class="project-info">
-                        <h3>MediCare Pro [cite: 116]</h3>
-                        <p>Integrated GUI system for hospital staff and patient management.</p>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <img src="img566.jpg" alt="Income Prediction" class="project-img">
-                    <div class="project-info">
-                        <h3>Income Prediction AI [cite: 133]</h3>
-                        <p>ML model predicting income brackets using demographic attributes.</p>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <img src="img576.jpg" alt="Ford GoBike" class="project-img">
-                    <div class="project-info">
-                        <h3>Ford GoBike Dashboard </h3>
-                        <p>Interactive mobility analysis visualizing trip patterns and peak hours.</p>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <img src="drone-img.jpg" alt="Firefighting Drone" class="project-img">
-                    <div class="project-info">
-                        <h3>Firefighting Drone </h3>
-                        <p>Autonomous drone using sensors and chemical cooling to prevent forest fires.</p>
-                    </div>
+    
+
+   <section id="projects" class="projects-section">
+    <div class="container">
+        <h2 class="section-title">Projects</h2>
+        
+        <div class="projects-vertical">
+
+            <div class="project-card">
+                <img src="img531.jpg" alt="AstroVision" class="project-img">
+                <div class="project-info">
+                    <h3>Astro_Vision</h3>
+                    <p>AI platform for exoplanet detection analyzing NASA Kepler/TESS data.</p>
+                    <a href="https://amr-kzf.github.io/AstroVision/" class="btn-small">View Website</a>
                 </div>
             </div>
+
+            <div class="project-card">
+                <img src="img550.jpg" alt="MediCare Pro" class="project-img">
+                <div class="project-info">
+                    <h3>MediCare Hospital System</h3>
+                    <p>Integrated GUI system for hospital staff and patient management.</p>
+                    <a href="https://github.com/sarazaki/hospital-system.git" class="btn-small">View Repository</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="img566.jpg" alt="Income Prediction" class="project-img">
+                <div class="project-info">
+                    <h3>Income Prediction AI</h3>
+                    <p>ML model predicting income brackets using demographic attributes.</p>
+                    <a href="https://www.canva.com/design/DAGwkE_e3Ug/ZXmYkh1jffu3I4YFjpvN4g/edit?utm_content=DAGwkE_e3Ug&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="btn-small">View Presentation</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="img576.jpg" alt="Ford GoBike" class="project-img">
+                <div class="project-info">
+                    <h3>Ford GoBike Dashboard</h3>
+                    <p>Interactive mobility analysis visualizing trip patterns and peak hours.</p>
+                    <a href="https://github.com/sarazaki/data-analysis-final-project.git" class="btn-small">View Repository</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="drone-img.jpg" alt="Firefighting Drone" class="project-img">
+                <div class="project-info">
+                    <h3>Firefighting Drone</h3>
+                    <p>Autonomous drone using sensors and chemical cooling to prevent forest fires.</p>
+                </div>
+            </div>
+
+        </div> </div> </section>
+
+    <section id="certifications">
+    <div class="container">
+        <h2 class="section-title">Licenses & <span class="highlight">Certifications</span></h2>
+        <div class="certs-grid">
+            
+            <div class="cert-card">
+                <div class="cert-icon"><i class="fas fa-brain"></i></div>
+                <div class="cert-info">
+                    <h3>Getting Started with Deep Learning</h3>
+                    <p class="cert-issuer">NVIDIA Deep Learning Institute (DLI)</p>
+                    <p class="cert-date">Issued Feb 2026</p>
+                    <a href="#" class="btn-cert">Show Credential</a>
+                </div>
+            </div>
+
+            <div class="cert-card">
+                <div class="cert-icon"><i class="fas fa-rocket"></i></div>
+                <div class="cert-info">
+                    <h3>Galactic Problem Solver</h3>
+                    <p class="cert-issuer">NASA International Space Apps Challenge</p>
+                    <p class="cert-date">Oct 2024</p>
+                    <a href="#" class="btn-cert">Show Credential</a>
+                </div>
+            </div>
+
+            <div class="cert-card">
+                <div class="cert-icon"><i class="fas fa-award"></i></div>
+                <div class="cert-info">
+                    <h3>Academic Excellence Award</h3>
+                    <p class="cert-issuer">El Araby & Toshiba</p>
+                    <p class="cert-date">2024</p>
+                    <a href="#" class="btn-cert">View Award</a>
+                </div>
+            </div>
+
+            <div class="cert-card">
+                <div class="cert-icon"><i class="fas fa-network-wired"></i></div>
+                <div class="cert-info">
+                    <h3>HCIA-AI V4.0</h3>
+                    <p class="cert-issuer">Huawei ICT Academy</p>
+                    <p class="cert-date">Feb 2026</p>
+                    <a href="#" class="btn-cert">Show Credential</a>
+                </div>
+            </div>
+
         </div>
-    </section>
+    </div>
+</section>
 
     <section id="contact" class="contact-section">
         <div class="container">
@@ -180,7 +256,9 @@
                     <a href="https://github.com/mariamahmed10395-boop" target="_blank"><i class="fab fa-github"></i></a>
                     <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                     <a href="mailto:mariamahmed10395@gmail.com"><i class="fas fa-envelope"></i></a>
-                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://wa.me/201022436065" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    </a>
                 </div>
             </div>
         </div>

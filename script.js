@@ -1,64 +1,54 @@
 /* =========================================
    1. تهيئة خلفية الجزيئات (Particles.js)
    ========================================= */
-particlesJS("particles-js", {
-  "particles": {
-    "number": {
-      "value": 100, // زيادة العدد قليلاً لشكل أغنى
-      "density": { "enable": true, "value_area": 800 }
-    },
-    "color": { "value": "#00abf0" },
-    "shape": {
-      "type": "circle",
-      "stroke": { "width": 0, "color": "#000000" }
-    },
-    "opacity": {
-      "value": 0.5,
-      "random": true,
-      "anim": { "enable": true, "speed": 1, "opacity_min": 0.1, "sync": false }
-    },
-    "size": {
-      "value": 3,
-      "random": true,
-      "anim": { "enable": false, "speed": 40, "size_min": 0.1, "sync": false }
-    },
-    "line_linked": {
-      "enable": true,
-      "distance": 150,
-      "color": "#00abf0",
-      "opacity": 0.4,
-      "width": 1
-    },
-    "move": {
-      "enable": true,
-      "speed": 3,
-      "direction": "none",
-      "random": false,
-      "straight": false,
-      "out_mode": "out",
-      "bounce": false,
-      "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 }
+// تأكدي أن هذا الكود يعمل بمجرد تحميل الصفحة
+document.addEventListener('DOMContentLoaded', function() {
+    if (document.getElementById('particles-js')) {
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 110, // زيادة العدد ليكون الشكل أغنى خلف النصوص
+                    "density": { "enable": true, "value_area": 800 }
+                },
+                "color": { "value": "#00abf0" },
+                "shape": { "type": "circle" },
+                "opacity": {
+                    "value": 0.7, // جعلها واضحة وبارزة كما طلبتِ
+                    "random": true,
+                    "anim": { "enable": true, "speed": 1, "opacity_min": 0.2, "sync": false }
+                },
+                "size": {
+                    "value": 4,
+                    "random": true
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#00abf0",
+                    "opacity": 0.6, // خطوط واضحة
+                    "width": 1.5
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 3,
+                    "direction": "none",
+                    "out_mode": "out"
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": { "enable": true, "mode": "grab" },
+                    "onclick": { "enable": true, "mode": "push" },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": { "distance": 140, "line_linked": { "opacity": 1 } }
+                }
+            },
+            "retina_detect": true
+        });
     }
-  },
-  "interactivity": {
-    "detect_on": "canvas",
-    "events": {
-      "onhover": {
-        "enable": true,
-        "mode": "grab" // الجزيئات تنجذب للماوس عند المرور
-      },
-      "onclick": {
-        "enable": true,
-        "mode": "push" // إضافة جزيئات جديدة عند الضغط
-      },
-      "resize": true
-    },
-    "modes": {
-      "grab": { "distance": 140, "line_linked": { "opacity": 1 } },
-      "push": { "particles_nb": 4 }
-    }
-  },
-  "retina_detect": true
 });
 
 /* =========================================
@@ -68,20 +58,19 @@ const robot = document.querySelector('.mini-robot');
 
 if (robot) {
     window.addEventListener('mousemove', (e) => {
-        // حساب المسافة لتحريك الروبوت بنعومة
-        const x = (e.clientX / window.innerWidth - 0.5) * 30;
-        const y = (e.clientY / window.innerHeight - 0.5) * 30;
+        // تحريك الروبوت بنعومة مع حركة الماوس
+        const x = (e.clientX / window.innerWidth - 0.5) * 35;
+        const y = (e.clientY / window.innerHeight - 0.5) * 35;
         
-        // تحريك الروبوت مع دوران خفيف ليعطي إحساس الطيران
         robot.style.transform = `translate(${x}px, ${y}px) rotate(${x / 2}deg)`;
     });
 
-    // إضافة تأثير عند الضغط على الروبوت
+    // تفاعل الروبوت عند الضغط عليه
     robot.addEventListener('click', () => {
-        robot.style.transition = "0.2s";
-        robot.style.transform = "scale(0.8)";
+        robot.style.transition = "0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)";
+        robot.style.transform = "scale(0.7) rotate(-20deg)";
         setTimeout(() => {
-            robot.style.transform = "scale(1.2)";
+            robot.style.transform = "scale(1.2) rotate(0deg)";
         }, 200);
     });
 }
@@ -89,18 +78,27 @@ if (robot) {
 /* =========================================
    3. تأثير ظهور العناصر عند التمرير (Reveal Effect)
    ========================================= */
-const revealElements = document.querySelectorAll('.project-card, .skill-item, .service-card');
+const revealElements = document.querySelectorAll('.project-card, .skill-item, .exp-card, .cert-card');
 
 const revealOnScroll = () => {
     revealElements.forEach(el => {
         const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) {
+        // تظهر العناصر عندما تقترب من منتصف الشاشة
+        if (rect.top < window.innerHeight - 50) {
             el.style.opacity = "1";
-            el.style.transform = "translateY(0)";
+            el.style.transform = "translateY(0) scale(1)";
+            el.style.transition = "all 0.8s ease-out";
         }
     });
 };
 
+// تشغيل التأثير عند السكرول وعند تحميل الصفحة
 window.addEventListener('scroll', revealOnScroll);
-// تشغيل الدالة مرة واحدة عند التحميل للتأكد من ظهور العناصر العلوية
-revealOnScroll();
+window.addEventListener('load', () => {
+    // تعيين الحالة المبدئية للعناصر قبل ظهورها
+    revealElements.forEach(el => {
+        el.style.opacity = "0";
+        el.style.transform = "translateY(30px) scale(0.95)";
+    });
+    revealOnScroll();
+});
