@@ -1,15 +1,13 @@
-// smooth scrolling
+document.querySelectorAll('nav a').forEach(anchor => {
 
-document.querySelectorAll('nav a').forEach(link => {
-
-link.addEventListener('click', function(e){
+anchor.addEventListener('click', function (e) {
 
 e.preventDefault()
 
-const section = document.querySelector(this.getAttribute('href'))
+document.querySelector(this.getAttribute('href')).scrollIntoView({
 
-section.scrollIntoView({
-behavior:"smooth"
+behavior: 'smooth'
+
 })
 
 })
