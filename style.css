@@ -176,7 +176,6 @@ section {
    ========================================= */
 .about-section {
     position: relative;
-    background: var(--second-bg-color);
 }
 
 .about-text-box {
@@ -392,7 +391,6 @@ section {
    ========================================= */
 .contact-section {
     text-align: center;
-    background-color: var(--bg-color);
 }
 
 .contact-wrapper h3 {
