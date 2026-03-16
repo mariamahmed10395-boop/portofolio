@@ -197,6 +197,7 @@ section {
     width: 400px; /* تصغير الصورة قليلاً لتناسب السطر */
     border-radius: 20px;
     box-shadow: 0 0 30px rgba(0, 171, 240, 0.3);
+    margin-left: 40px;
 }
 
 .about-text-box {
