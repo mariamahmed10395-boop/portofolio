@@ -124,10 +124,11 @@ section {
     justify-content: space-between;
     align-items: center;
     gap: 50px;
+    flex-direction: row-reverse; 
 }
 
 .hero-text h1 {
-    display: block; /* ليكون في سطر منفصل */
+    display: block; 
     font-size: 4.5rem;
     font-weight: 800;
     background: linear-gradient(90deg, var(--main-color), var(--accent-color));
