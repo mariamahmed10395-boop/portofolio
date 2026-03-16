@@ -123,8 +123,7 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 50px;
-    flex-direction: row-reverse; 
+    gap: 80px;
 }
 
 .hero-text h1 {
@@ -195,7 +194,7 @@ section {
 }
 
 .about-img-box img {
-    width: 400px; /* تصغير الصورة قليلاً لتناسب السطر */
+    width: 400px; 
     border-radius: 20px;
     box-shadow: 0 0 30px rgba(0, 171, 240, 0.3);
     margin-left: 40px;
